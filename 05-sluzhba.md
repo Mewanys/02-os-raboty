@@ -46,10 +46,14 @@ sudo systemctl start zagruzka-log.service
 
 Пример вывода:
 ```
-● zagruzka-log.service - Запись информации о загрузке системы
-     Loaded: loaded (/etc/systemd/system/zagruzka-log.service; enabled)
-     Active: inactive (dead) since ...
-    Process: ... ExecStart=/usr/local/bin/zagruzka-log.sh (code=exited, status=0/SUCCESS)
+○ zagruzka-log.service - Запись отметки о загрузке системы
+     Loaded: loaded (/etc/systemd/system/zagruzka-log.service; enabled; preset: enabled)
+     Active: inactive (dead) since Fri 2026-10-02 16:27:13 +07; 7min ago
+ Invocation: 0f75dab203244ad39c4a0cdb1f3d0dd3
+    Process: 740 ExecStart=/usr/local/bin/zagruzka-log.sh (code=exited, status=0/SUCCESS)
+   Main PID: 740 (code=exited, status=0/SUCCESS)
+   Mem peak: 1.7M
+        CPU: 39ms
 ```
 Статус inactive (dead) для этой службы нормально, потому что скрипт выполняется один раз и после успешного выполнения завершается.
 
